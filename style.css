@@ -1,0 +1,63 @@
+:root {
+  font-family: Inter, system-ui, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body{
+  margin: 1rem;
+  padding: 0;
+}
+
+.container{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.image-container{
+  background: url(./building.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  height: 27.25em;
+  width: 32.5em;
+}
+
+.windmill{
+  position: absolute;
+  top: 50px;
+  left: 150px;
+  cursor: pointer;
+  animation: rotate 0.5s infinite linear paused;
+}
+
+@keyframes rotate{
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.windmill:hover{
+  animation-play-state: running;
+}
+
+.windmill{
+  rotate: 0deg;
+  transition: rotate 3s cubic-bezier(0.5, 1, 1, 1);
+}
+
+.windmill:hover{
+  rotate: -720deg;
+}
